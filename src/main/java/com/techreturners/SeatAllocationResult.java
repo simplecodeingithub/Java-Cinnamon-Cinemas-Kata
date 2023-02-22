@@ -3,11 +3,11 @@ package com.techreturners;
 import java.util.List;
 
 public class SeatAllocationResult {
-    private final boolean succesful;
+    private final boolean successful;
     private final List<Seat> seats;
 
-    public SeatAllocationResult(boolean succesful, List<Seat> seats) {
-        this.succesful = succesful;
+    public SeatAllocationResult(boolean successful, List<Seat> seats) {
+        this.successful = successful;
         this.seats = seats;
     }
     public static SeatAllocationResult success(List<Seat>seats){
@@ -16,8 +16,8 @@ public class SeatAllocationResult {
     public static SeatAllocationResult failure(){
         return new SeatAllocationResult(false,null);
     }
-    public boolean isSuccesful(){
-        return succesful;
+    public boolean isSuccessful(){
+        return successful;
     }
     public List<Seat>getSeats(){
         return seats;

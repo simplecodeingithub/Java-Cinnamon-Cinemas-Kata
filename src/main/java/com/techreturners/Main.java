@@ -15,7 +15,7 @@ public class Main {
                 continue;
             }
             SeatAllocationResult result=movieTheatre.allocateSeats(numSeats);
-            if(result.isSuccesful()){
+            if(result.isSuccessful()){
                 System.out.println("Seats allocated Successfully:" + result.getSeats());
             }
             else {

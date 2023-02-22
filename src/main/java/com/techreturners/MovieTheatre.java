@@ -17,7 +17,9 @@ public class MovieTheatre {
             }
         }
     }
-
+    public int getTotalSeats(){
+        return availableSeats.size();
+    }
     public SeatAllocationResult allocateSeats(int numSeats){
         if(numSeats<1 || numSeats>3){
             throw new IllegalArgumentException("Number of seats must be between 1 and 3 ");
