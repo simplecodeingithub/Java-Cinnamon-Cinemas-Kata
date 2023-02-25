@@ -17,9 +17,15 @@ public class Main {
             SeatAllocationResult result=movieTheatre.allocateSeats(numSeats);
             if(result.isSuccessful()){
                 System.out.println("Seats allocated Successfully:" + result.getSeats());
+                System.out.println("Remaining Seats:" + movieTheatre.getTotalSeats());
             }
             else {
                 System.out.println("Sorry, there are not enough seats available.Please try again.");
+                System.out.println("Remaining Seats:" + movieTheatre.getTotalSeats());
+            }
+            if(movieTheatre.getTotalSeats()==0){
+                System.out.println("All seats have been allocated.Exiting Program ");
+                break;
             }
         }
     }

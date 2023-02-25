@@ -1,7 +1,9 @@
 package com.techreturners;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class MovieTheatre {
     private final int numRows=3;
@@ -19,6 +21,7 @@ public class MovieTheatre {
     }
     public int getTotalSeats(){
         return availableSeats.size();
+       // return totalSeats;
     }
     public SeatAllocationResult allocateSeats(int numSeats){
         if(numSeats<1 || numSeats>3){

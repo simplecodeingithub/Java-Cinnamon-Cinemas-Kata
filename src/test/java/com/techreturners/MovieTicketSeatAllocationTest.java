@@ -38,6 +38,21 @@ public class MovieTicketSeatAllocationTest {
         }
 
     }
+    @Test
+    void TestToChcekRemainingSeatAfterAllocation(){
+        MovieTheatre movieTheatre=new MovieTheatre();
+        int initialTotalSeats=movieTheatre.getTotalSeats();
+
+        SeatAllocationResult result1=movieTheatre.allocateSeats(2);
+        assertTrue(result1.isSuccessful());
+
+        SeatAllocationResult result2=movieTheatre.allocateSeats(1);
+        assertTrue(result2.isSuccessful());
+        //check remaining seats
+        int remainingSeats=movieTheatre.getTotalSeats()-result1.getSeats().size()-result2.getSeats().size();
+        assertEquals(initialTotalSeats-3,movieTheatre.getTotalSeats());
+    }
+
 }
 
 
